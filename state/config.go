@@ -2,8 +2,8 @@ package state
 
 import (
 	"encoding/json"
+	"github.com/ContainerSolutions/avaza/auth"
 	xdg_ "github.com/OpenPeeDeeP/xdg"
-	"github.com/moretea/avaza/auth"
 	"io/ioutil"
 	"log"
 	"os"

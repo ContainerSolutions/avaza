@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/moretea/avaza/auth"
-	"github.com/moretea/avaza/state"
+	"github.com/ContainerSolutions/avaza/auth"
+	"github.com/ContainerSolutions/avaza/state"
 	"github.com/urfave/cli"
 	"log"
 )

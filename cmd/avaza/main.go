@@ -1,8 +1,8 @@
 package main
 
 import (
-	authorizer_ "github.com/moretea/avaza/authorizer"
-	"github.com/moretea/avaza/state"
+	authorizer_ "github.com/ContainerSolutions/avaza/authorizer"
+	"github.com/ContainerSolutions/avaza/state"
 	"github.com/urfave/cli"
 	"log"
 	"os"

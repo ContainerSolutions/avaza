@@ -2,11 +2,11 @@ package authorizer
 
 import (
 	"fmt"
+	"github.com/ContainerSolutions/avaza/client/client"
+	"github.com/ContainerSolutions/avaza/client/simple_client"
+	"github.com/ContainerSolutions/avaza/state"
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
-	"github.com/moretea/avaza/client/client"
-  "github.com/moretea/avaza/client/simple_client"
-	"github.com/moretea/avaza/state"
 	"log"
 	"time"
 )
@@ -28,13 +28,12 @@ func (a *Authorizer) RefreshIfNecessary() {
 }
 
 func (a *Authorizer) SimpleClient() *simple_client.Client {
-  return simple_client.NewClient(a, a.Client())
+	return simple_client.NewClient(a, a.Client())
 }
 
 func (a *Authorizer) Client() *client.AvazaAPIDocumentation {
 	return client.NewHTTPClient(strfmt.Default)
 }
-
 
 func (a *Authorizer) CreateAuth() runtime.ClientAuthInfoWriterFunc {
 	return func(r runtime.ClientRequest, _ strfmt.Registry) error {
